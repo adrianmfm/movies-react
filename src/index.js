@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Fragment } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { List } from "./containers/List";
+import "bootswatch/dist/lux/bootstrap.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
+  return (
+    <Fragment>
+      <nav className="navbar navbar-dark bg-dark border-bottom border-white" >
+        <a href="/" className="navbar-brand" style={{marginLeft: '20px'}}>
+          MovieApp
+        </a>
+      </nav>
+      <main className="bg-dark">
+        <div className="container">
+          <List />
+        </div>
+      </main>
+    </Fragment>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
