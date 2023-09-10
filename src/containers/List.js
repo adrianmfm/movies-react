@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import { Card } from "../components/card/Card";
 
-const API = 'http://www.omdbapi.com/?i=tt3896198&apikey=55aa4907'
+const API = 'https://www.omdbapi.com/?i=tt3896198&apikey=55aa4907'
 export class List extends React.Component {
     constructor(){
         super()
